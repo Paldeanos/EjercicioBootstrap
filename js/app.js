@@ -33,6 +33,17 @@ fetch("https://raw.githubusercontent.com/FRomero999/ExamenDIW2022/main/clientes.
         }
       };
 
+      const metabolismoGET = function (nivelActividad, metabolismoGER, sexo) {
+        if (nivelActividad === "sedentaria" && sexo === 'hombre') return metabolismoGER*1.3;
+        if (nivelActividad === "ligera" && sexo === 'hombre') return metabolismoGER*1.6;
+        if (nivelActividad === "moderada" && sexo === 'hombre') return metabolismoGER*1.7;
+        if (nivelActividad === "intensa" && sexo === 'hombre') return metabolismoGER*2.1;
+        if (nivelActividad === "sedentaria" && sexo === 'mujer') return metabolismoGER*1.3;
+        if (nivelActividad === "ligera" && sexo === 'mujer') return metabolismoGER*1.5;
+        if (nivelActividad === "moderada" && sexo === 'mujer') return metabolismoGER*1.6;
+        if (nivelActividad === "intensa" && sexo === 'mujer') return metabolismoGER*1.9;
+    }
+
       celdaNombre.textContent = el.nombre
       celdaApellidos.textContent = el.apellidos
       celdaEdad.textContent = el.edad
@@ -41,8 +52,9 @@ fetch("https://raw.githubusercontent.com/FRomero999/ExamenDIW2022/main/clientes.
 
       spanSexo.textContent = el.sexo
       spanActividad.textContent = el.actividad
-
-      celdaGER.textContent = metabolismoGER(el.peso, el.altura, el.edad, el.sexo);
+      const calculoGER = metabolismoGER(el.peso, el.altura, el.edad, el.sexo);
+      celdaGER.textContent = calculoGER;
+      celdaGET.textContent = metabolismoGET(el.actividad, calculoGER, el.sexo);
 
       spanSexo.classList.add("bg-primary", "rounded", "text-white", "px-2");
       celdaSexo.appendChild(spanSexo);
@@ -59,6 +71,7 @@ fetch("https://raw.githubusercontent.com/FRomero999/ExamenDIW2022/main/clientes.
       fila.appendChild(celdaAltura);
       fila.appendChild(celdaActividad);
       fila.appendChild(celdaGER);
+      fila.appendChild(celdaGET);
       tbody.appendChild(fila);
 
 
