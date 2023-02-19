@@ -92,7 +92,7 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <form id="formulario" class="row g-3">
+                <form id="formulario" class="row g-3 needs-validation">
                   <div class="col-12 mb-0">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input
@@ -100,6 +100,7 @@
                       class="form-control"
                       id="nombre"
                       placeholder="Nombre"
+                      pattern="([A-z-À-ž\s]){2,}"
                       required
                     />
                   </div>
@@ -110,6 +111,7 @@
                       class="form-control"
                       id="apellidos"
                       placeholder="Apellidos"
+                      pattern="([A-z-À-ž\s]){2,}"
                       required
                     />
                   </div>
@@ -150,6 +152,8 @@
                       class="form-control"
                       id="edad"
                       placeholder="35"
+                      min="18"
+                      max="200"
                       required
                     />
                   </div>
@@ -160,6 +164,8 @@
                       class="form-control"
                       id="peso"
                       placeholder="45"
+                      min="45"
+                      max="300"
                       required
                     />
                   </div>
@@ -170,6 +176,8 @@
                       class="form-control"
                       id="altura"
                       placeholder="165"
+                      min="140"
+                      max="300"
                       required
                     />
                   </div>
