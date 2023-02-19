@@ -115,14 +115,15 @@
                   </div>
 
                   <div class="col-6 mb-0">
-                    <label for="genero" class="form-label">Género</label>
+                    <label for="sexo" class="form-label">Género</label>
                     <select
                       class="form-select"
-                      aria-label="Default select genero"
+                      aria-label="Default select sexo"
+                      id="sexo"
                       required
                     >
-                      <option selected value="1">Masculino</option>
-                      <option value="2">Femenino</option>
+                      <option selected value="Masculino">Masculino</option>
+                      <option value="Femenino">Femenino</option>
                     </select>
                   </div>
                   <div class="col-6 mb-0">
@@ -132,12 +133,13 @@
                     <select
                       class="form-select"
                       aria-label="Default select actividad"
+                      id="actividad"
                       required
                     >
-                      <option selected>Ligera</option>
-                      <option value="1">Moderada</option>
-                      <option value="2">Intensa</option>
-                      <option value="3">Sedentaria</option>
+                      <option selected value="Ligera">Ligera</option>
+                      <option value="Moderada">Moderada</option>
+                      <option value="Intensa">Intensa</option>
+                      <option value="Sedentaria">Sedentaria</option>
                     </select>
                   </div>
 
@@ -186,6 +188,7 @@
                   form="formulario"
                   value="Update"
                   class="btn btn-primary"
+                  id="insertClient"
                 >
                   Guardar cliente
                 </button>
