@@ -88,8 +88,6 @@ document.addEventListener("DOMContentLoaded", cargarDatos);
 let btnCarga = document.getElementById("carga");
 btnCarga.addEventListener("click", cargarDatos);
 
-
-
   /* Modal */
 const myModal = document.getElementById('myModal')
 const myInput = document.getElementById('myInput')
