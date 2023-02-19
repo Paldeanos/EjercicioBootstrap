@@ -1,7 +1,8 @@
 'use strict'
 
   /* Importación de datos */
-fetch("https://raw.githubusercontent.com/FRomero999/ExamenDIW2022/main/clientes.json")
+document.getElementById("carga").addEventListener("click", function () {
+  fetch("https://raw.githubusercontent.com/FRomero999/ExamenDIW2022/main/clientes.json")
   .then(response => response.json())
   .then(data => {
 
@@ -34,15 +35,15 @@ fetch("https://raw.githubusercontent.com/FRomero999/ExamenDIW2022/main/clientes.
       };
 
       const metabolismoGET = function (nivelActividad, metabolismoGER, sexo) {
-        if (nivelActividad === "sedentaria" && sexo === 'hombre') return metabolismoGER*1.3;
-        if (nivelActividad === "ligera" && sexo === 'hombre') return metabolismoGER*1.6;
-        if (nivelActividad === "moderada" && sexo === 'hombre') return metabolismoGER*1.7;
-        if (nivelActividad === "intensa" && sexo === 'hombre') return metabolismoGER*2.1;
-        if (nivelActividad === "sedentaria" && sexo === 'mujer') return metabolismoGER*1.3;
-        if (nivelActividad === "ligera" && sexo === 'mujer') return metabolismoGER*1.5;
-        if (nivelActividad === "moderada" && sexo === 'mujer') return metabolismoGER*1.6;
-        if (nivelActividad === "intensa" && sexo === 'mujer') return metabolismoGER*1.9;
-    }
+        if (nivelActividad === "sedentaria" && sexo === 'hombre') return metabolismoGER * 1.3;
+        if (nivelActividad === "ligera" && sexo === 'hombre') return metabolismoGER * 1.6;
+        if (nivelActividad === "moderada" && sexo === 'hombre') return metabolismoGER * 1.7;
+        if (nivelActividad === "intensa" && sexo === 'hombre') return metabolismoGER * 2.1;
+        if (nivelActividad === "sedentaria" && sexo === 'mujer') return metabolismoGER * 1.3;
+        if (nivelActividad === "ligera" && sexo === 'mujer') return metabolismoGER * 1.5;
+        if (nivelActividad === "moderada" && sexo === 'mujer') return metabolismoGER * 1.6;
+        if (nivelActividad === "intensa" && sexo === 'mujer') return metabolismoGER * 1.9;
+      }
 
       celdaNombre.textContent = el.nombre
       celdaApellidos.textContent = el.apellidos
@@ -76,11 +77,11 @@ fetch("https://raw.githubusercontent.com/FRomero999/ExamenDIW2022/main/clientes.
 
 
     })
-
       .catch(err => {
         alert("Hubo error. Recargue la página.")
       });
   });
+});
 
 
 
