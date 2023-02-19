@@ -175,7 +175,7 @@ botonInsert.addEventListener("click", () => {
           } else {
             return "Error en el cálculo.";
           }
-        }
+        };
 
         // Se rellenan las celdas con los datos del formulario
         celdaNombre.textContent = nombreCliente;
