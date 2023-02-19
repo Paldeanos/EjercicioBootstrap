@@ -8,8 +8,8 @@ function cargarDatos() {
 
     data.forEach(function (el) {
 
-      let tabla = document.getElementById("tabla");
-      let tbody = tabla.getElementsByTagName("tbody")[0];
+      let tabla = document.querySelector("#tabla");
+      let tbody = tabla.querySelector("tbody")[0];
 
       let fila = document.createElement("tr");
 
@@ -85,7 +85,7 @@ function cargarDatos() {
 
 document.addEventListener("DOMContentLoaded", cargarDatos);
 
-let btnCarga = document.getElementById("carga");
+let btnCarga = document.querySelector("#carga");
 btnCarga.addEventListener("click", cargarDatos);
 
   /* Modal */
