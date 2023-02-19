@@ -1,7 +1,7 @@
 'use strict'
 
   /* Importación de datos */
-document.getElementById("carga").addEventListener("click", function () {
+function cargarDatos() {
   fetch("https://raw.githubusercontent.com/FRomero999/ExamenDIW2022/main/clientes.json")
   .then(response => response.json())
   .then(data => {
@@ -53,9 +53,9 @@ document.getElementById("carga").addEventListener("click", function () {
 
       spanSexo.textContent = el.sexo
       spanActividad.textContent = el.actividad
-      const calculoGER = metabolismoGER(el.peso, el.altura, el.edad, el.sexo);
+      const calculoGER = Math.floor(metabolismoGER(el.peso, el.altura, el.edad, el.sexo));
       celdaGER.textContent = calculoGER;
-      celdaGET.textContent = metabolismoGET(el.actividad, calculoGER, el.sexo);
+      celdaGET.textContent = Math.floor(metabolismoGET(el.actividad, calculoGER, el.sexo));
 
       spanSexo.classList.add("bg-primary", "rounded", "text-white", "px-2");
       celdaSexo.appendChild(spanSexo);
@@ -81,7 +81,12 @@ document.getElementById("carga").addEventListener("click", function () {
         alert("Hubo error. Recargue la página.")
       });
   });
-});
+};
+
+document.addEventListener("DOMContentLoaded", cargarDatos);
+
+let btnCarga = document.getElementById("carga");
+btnCarga.addEventListener("click", cargarDatos);
 
 
 
