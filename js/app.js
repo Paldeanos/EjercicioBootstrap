@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", cargarDatos);
 
 const botonInsert = document.querySelector("#insertClient");
 
-const btnCarga = document.getElementById("carga");
+const btnCarga = document.querySelector("#carga");
 btnCarga.addEventListener("click", cargarDatos);
 
 botonInsert.addEventListener("click", (event) => {
