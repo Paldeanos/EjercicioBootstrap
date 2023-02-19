@@ -82,8 +82,6 @@ fetch("https://raw.githubusercontent.com/FRomero999/ExamenDIW2022/main/clientes.
       });
   });
 
-
-
   /* Modal */
 const myModal = document.getElementById('myModal')
 const myInput = document.getElementById('myInput')
