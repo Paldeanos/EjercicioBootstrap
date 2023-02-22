@@ -1,0 +1,9 @@
+Se ha detectado un fallo en la aplicacion. Los datos no se insertan correctamente del formulario.
+
+Para que la insercion de datos del formulario se efectue correctamente se debe intentar enviar el formulario
+al menos una vez con algun dato erroneo, y luego ya enviarlo (como se ve en el video).
+
+Se ha intentado debugear este error, pero no se ha conseguido solventar. Se agradeceria feedback para staticBackdropLabel
+que puede estar ocurriendo.
+
+Disculpe las molestias.

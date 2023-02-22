@@ -145,8 +145,8 @@ botonInsert.addEventListener("click", () => {
         };
         
         const calculoGER = metabolismoGER(pesoCliente, alturaCliente, edadCliente, sexoCliente);
-        nuevoCliente.querySelector(".celdaGET").textContent = calculoGER;
-        nuevoCliente.querySelector(".celdaGER").textContent = metabolismoGET(actividadCliente, calculoGER, sexoCliente);
+        nuevoCliente.querySelector(".celdaGER").textContent = calculoGER;
+        nuevoCliente.querySelector(".celdaGET").textContent = metabolismoGET(actividadCliente, calculoGER, sexoCliente);
 
         wrap.appendChild(nuevoCliente);       
         contenedor.appendChild(wrap);
