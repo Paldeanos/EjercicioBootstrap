@@ -66,9 +66,9 @@ function cargarDatos() {
       });
     })
     .catch(err => {
-        alert("Hubo un error: " + err +". Recargue la página.");
-      });
-    };
+        alert("Hubo un error: " + err + ". Recargue la página.");
+    });
+  };
 
 document.addEventListener("DOMContentLoaded", cargarDatos);
 
