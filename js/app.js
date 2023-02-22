@@ -93,7 +93,7 @@ function cargarDatos() {
 
     })
       .catch(err => {
-        alert("Hubo error. Recargue la página.")
+        alert("Hubo un error" + err +". Recargue la página.")
       });
   });
 };
@@ -113,6 +113,7 @@ botonInsert.addEventListener("click", () => {
   // Loop over them and prevent submission
   Array.from(forms).forEach(form => {
     form.addEventListener('submit', event => {
+      // Se valida el formulario antes de enviar los datos
       if (!form.checkValidity()) {
         event.preventDefault()
         event.stopPropagation()
@@ -190,24 +191,16 @@ botonInsert.addEventListener("click", () => {
         celdaGER.textContent = calculoGER;
         celdaGET.textContent = metabolismoGET(actividadCliente, calculoGER, sexoCliente);
 
-        // Limpiar el formulario y cerrar el modal
-        document.getElementById("formulario").reset();
-        let modal = bootstrap.Modal.getInstance(
-          document.getElementById("staticBackdrop")
-        );
-        modal.hide();
+        // // Limpiar el formulario y cerrar el modal
+        // document.getElementById("formulario").reset();
+        // let modal = bootstrap.Modal.getInstance(
+        //   document.getElementById("staticBackdrop")
+        // );
+        // modal.hide();
       }
 
-      form.classList.add('was-validated')
+      form.classList.add('was-validated');
     }, false)
   })
 
-})()
-
-  /* Modal */
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-});
+})
